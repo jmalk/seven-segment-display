@@ -31,9 +31,17 @@ function update (result) {
   console.log(output);
 }
 
-module.exports = function ticker (result) {
+module.exports = function Ticker () {
+  let value = ' ';
+
   const interval = setInterval(() => {
-    update(result);
+    update(value);
     chunk = (chunk + 1) % tapeWidth;
   }, 100);
+
+  return {
+    updateValue(newValue) {
+      value = newValue;
+    }
+  }
 }

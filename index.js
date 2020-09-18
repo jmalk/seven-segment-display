@@ -2,21 +2,22 @@ const currentTime = require(`./current-time`);
 const timeToString = require(`./time-to-string`);
 const validateInput = require(`./validate-input`);
 const convert = require(`./convert`);
-const ticker = require(`./ticker`);
+const Ticker = require(`./ticker`);
 
-function update() {
+const ticker = Ticker();
+
+function updateTime() {
   const string = timeToString(currentTime());
   const isValid = validateInput(string);
 
   if (isValid) {
     const result = convert(string);
-    ticker(result);
+    ticker.updateValue(result);
   } else {
     console.error(`Generated an invalid string from the current time. Please file a bug report at https://github.com/jmalk/seven-segment-display/issues`);
     process.exit(1);
   }
 }
 
-// const tick = setInterval(update, 500);
-
-update();
+setInterval(updateTime, 500);
+updateTime();
