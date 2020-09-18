@@ -34,7 +34,7 @@ function update (result) {
 module.exports = function Ticker () {
   let value = ' ';
 
-  const interval = setInterval(() => {
+  setInterval(() => {
     update(value);
     tickerProgress = (tickerProgress + 1) % tapeWidth;
   }, 100);
