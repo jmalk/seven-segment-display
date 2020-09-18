@@ -1,5 +1,7 @@
 # README
 
+A seven segment display kata with evolving requirements.
+
 ## Run
 
 `node index.js 0123456789`
