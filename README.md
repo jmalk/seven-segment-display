@@ -41,3 +41,7 @@ Requirements: Instead of taking a number as an argument make it render the curre
 
 - Don’t let the console fill up, have it update in place by clearing it
 - Format hh:mm:ss (yes the colons need to be included.)
+
+There's been lots of churn as I discover bits of part 1 that weren't actually working as intended. But overall, the separation of gather input, convert it, output it has survived reasonably well. Instead of gather input you now have a `setInterval` which grabs the current time every half second. It is made into a string by `function timeToString({hours: number, minutes: number, seconds: number}): string` so that formatting logic could easily be changed in isolation.
+
+My main concern at the moment is that I'm generating too many files. E.g. left-pad could quite happily live inside time-to-string, since that's purely a formatting concern, not yet shared.
