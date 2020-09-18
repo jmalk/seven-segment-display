@@ -10,6 +10,11 @@ A seven segment display kata with evolving requirements.
 
 `node all-tests.test.js`
 
+## Churn between each set of requirements:
+
+Part One: https://github.com/jmalk/seven-segment-display/tree/v1.0
+Part One to Two: https://github.com/jmalk/seven-segment-display/compare/v1.0...v2.0
+
 ## Notes
 
 ### Part One: IO
