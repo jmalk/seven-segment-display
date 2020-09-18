@@ -40,7 +40,7 @@ Divided into:
   - Pass those characters into a function to collect the top row, then the middle, then the bottom, and group them together appropriately with newlines.
 - Output result of conversion
 
-### Part Two: Clock
+### Part Two: Clock
 
 Requirements: Instead of taking a number as an argument make it render the current time and get it to update at least every second.
 
