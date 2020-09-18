@@ -12,7 +12,7 @@ function update() {
     const result = convert(string);
     output(result);
   } else {
-    console.error(`Please supply digits as argument, e.g. node index.js 123`);
+    console.error(`Generated an invalid string from the current time. Please file a bug report at https://github.com/jmalk/seven-segment-display/issues`);
     process.exit(1);
   }
 }

@@ -1,5 +1,5 @@
-// TODO: Fix magic coupling between this and keys of characters
-const allowed = [`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, ':'];
+const characters = require(`./font`).characters;
+const allowed = Object.keys(characters);
 
 module.exports = function validateInput(input) {
   const isString = typeof input === `string`;
