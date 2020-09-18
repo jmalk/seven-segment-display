@@ -17,4 +17,6 @@ function update() {
   }
 }
 
-const tick = setInterval(update, 500);
+// const tick = setInterval(update, 500);
+
+update();
