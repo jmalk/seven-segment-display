@@ -32,7 +32,7 @@ function update (result) {
 }
 
 module.exports = function Ticker () {
-  let value = ' ';
+  let value = ` `;
 
   setInterval(() => {
     update(value);
