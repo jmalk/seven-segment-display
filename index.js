@@ -1,9 +1,14 @@
 const convert = require(`./convert`);
+const validateInput = require(`./validate-input`);
 
 const input = process.argv[2];
 
-// TODO: Check valid input, i.e. string of digits 0-9
+const isValid = validateInput(input);
 
-const output = convert(input);
-
-console.log(output);
+if (isValid) {
+  const output = convert(input);
+  console.log(output);
+} else {
+  console.error(`Please supply digits as argument, e.g. node index.js 123`);
+  process.exit(1);
+}
