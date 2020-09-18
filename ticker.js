@@ -3,7 +3,7 @@ const leftPad = require("./left-pad");
 const tapeWidth = 120;
 const itemWidth = 30;
 
-let chunk = 0;
+let tickerProgress = 0;
 
 function moveFirstNCharsToEnd(n, string) {
   const start = string.substring(0, n);
@@ -23,7 +23,7 @@ function update (result) {
   // TODO: Use tape width instead of line line line line... maybe?
   const repeatedLines = paddedLines.map((line) => `${line}${line}${line}${line}`)
 
-  const mover = moveFirstNCharsToEnd.bind(null, chunk);
+  const mover = moveFirstNCharsToEnd.bind(null, tickerProgress);
   const loopedLines = repeatedLines.map(mover);
 
   const output = loopedLines.join(`\n`);
@@ -36,7 +36,7 @@ module.exports = function Ticker () {
 
   const interval = setInterval(() => {
     update(value);
-    chunk = (chunk + 1) % tapeWidth;
+    tickerProgress = (tickerProgress + 1) % tapeWidth;
   }, 100);
 
   return {
