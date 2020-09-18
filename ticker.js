@@ -1,4 +1,4 @@
-const leftPad = require("./left-pad");
+const leftPad = require(`./left-pad`);
 
 const tapeWidth = 120;
 const itemWidth = 30;
@@ -18,7 +18,7 @@ function update (result) {
 
   const lines = result.split(`\n`).filter((ln) => ln.length > 0);
 
-  const paddedLines = lines.map((line) => leftPad(line, itemWidth, ' '));
+  const paddedLines = lines.map((line) => leftPad(line, itemWidth, ` `));
 
   // TODO: Use tape width instead of line line line line... maybe?
   const repeatedLines = paddedLines.map((line) => `${line}${line}${line}${line}`)
