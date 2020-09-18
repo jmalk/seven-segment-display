@@ -4,7 +4,7 @@ A seven segment display kata with evolving requirements.
 
 ## Run
 
-`node clock.js`
+`node index.js`
 
 ## Test
 
