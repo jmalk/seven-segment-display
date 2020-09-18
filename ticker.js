@@ -1,4 +1,4 @@
-module.exports = function output (result) {
+module.exports = function ticker (result) {
   console.clear();
   console.log(result);
 }
