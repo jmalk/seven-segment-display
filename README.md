@@ -8,7 +8,7 @@ A seven segment display kata with evolving requirements.
 
 ## Test
 
-`node *.test.js`
+`node all-tests.test.js`
 
 ## Notes
 
