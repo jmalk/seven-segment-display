@@ -4,7 +4,7 @@ A seven segment display kata with evolving requirements.
 
 ## Run
 
-`node index.js 0123456789`
+`node clock.js`
 
 ## Test
 
@@ -12,7 +12,7 @@ A seven segment display kata with evolving requirements.
 
 ## Notes
 
-### Part One
+### Part One: IO
 
 Requirements: An command-line arg of a string of digits should result in logging out a string with seven-segment numbers. e.g.
 
@@ -34,3 +34,10 @@ Divided into:
     - Dictionary of characters.
   - Pass those characters into a function to collect the top row, then the middle, then the bottom, and group them together appropriately with newlines.
 - Output result of conversion
+
+### Part Two: Clock
+
+Requirements: Instead of taking a number as an argument make it render the current time and get it to update at least every second.
+
+- Don’t let the console fill up, have it update in place by clearing it
+- Format hh:mm:ss (yes the colons need to be included.)

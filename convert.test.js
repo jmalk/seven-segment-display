@@ -15,3 +15,9 @@ assert.strictEqual(convert(`12`),
   `  ||_ ` + `\n`
 );
 
+assert.strictEqual(convert(`1:2`),
+  `       _ ` + `\n` +
+  `  | •  _|` + `\n` +
+  `  | • |_ ` + `\n`
+);
+
