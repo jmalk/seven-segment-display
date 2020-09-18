@@ -1,6 +1,8 @@
 const assert = require(`assert`).strict;
 const convert = require(`./convert`);
 
+console.log(`Running tests from ${__filename}`)
+
 assert.strictEqual(convert(`1`),
   `   ` + `\n` +
   `  |` + `\n` +
