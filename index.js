@@ -1,7 +1,8 @@
-const convert = require(`./convert`);
+const getInput = require(`./get-input`);
 const validateInput = require(`./validate-input`);
+const convert = require(`./convert`);
 
-const input = process.argv[2];
+const input = getInput();
 
 const isValid = validateInput(input);
 
