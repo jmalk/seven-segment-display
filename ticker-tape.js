@@ -1,13 +1,6 @@
 const leftPad = require(`./left-pad`);
 const moveFirstNCharsToEnd = require(`./move-first-n-chars-to-end`);
-
-function repeatUntilFull(string, width) {
-  let result = string;
-  while (result.length < width) {
-    result += string;
-  }
-  return result;
-}
+const repeatString = require(`./repeat-string`);
 
 function render (string, tickerProgress, tapeWidth, itemWidth) {
   console.clear();
@@ -16,7 +9,7 @@ function render (string, tickerProgress, tapeWidth, itemWidth) {
 
   const paddedLines = lines.map((line) => leftPad(line, itemWidth, ` `));
 
-  const repeatedLines = paddedLines.map((line) => repeatUntilFull(line, tapeWidth))
+  const repeatedLines = paddedLines.map((line) => repeatString(line, tapeWidth))
 
   const mover = moveFirstNCharsToEnd.bind(null, tickerProgress);
   const movedLines = repeatedLines.map(mover);
