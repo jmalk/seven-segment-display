@@ -22,7 +22,7 @@ function render (string, tickerProgress) {
   console.log(output);
 }
 
-module.exports = function Ticker () {
+module.exports = function TickerTape () {
   let value = ` `;
   let tickerProgress = 0;
 
