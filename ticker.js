@@ -40,7 +40,7 @@ module.exports = function Ticker () {
   }, 100);
 
   return {
-    updateValue(newValue) {
+    updateDisplay(newValue) {
       value = newValue;
     }
   }

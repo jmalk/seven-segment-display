@@ -12,7 +12,7 @@ function updateTime() {
 
   if (isValid) {
     const result = convert(string);
-    ticker.updateValue(result);
+    ticker.updateDisplay(result);
   } else {
     console.error(`Generated an invalid string from the current time. Please file a bug report at https://github.com/jmalk/seven-segment-display/issues`);
     process.exit(1);
