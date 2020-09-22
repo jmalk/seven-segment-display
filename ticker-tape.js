@@ -22,13 +22,14 @@ function render (string, tickerProgress, tapeWidth, itemWidth) {
 module.exports = function TickerTape () {
   const tapeWidth = 120;
   const itemWidth = 30;
+  const tickRate = 100;
   let value = ` `;
   let tickerProgress = 0;
 
   setInterval(() => {
     render(value, tickerProgress, tapeWidth, itemWidth);
     tickerProgress = (tickerProgress + 1) % tapeWidth;
-  }, 100);
+  }, tickRate);
 
   return {
     updateDisplay(newValue) {
