@@ -1,15 +1,8 @@
 const leftPad = require(`./left-pad`);
+const moveFirstNCharsToEnd = require(`./move-first-n-chars-to-end`);
 
 const tapeWidth = 120;
 const itemWidth = 30;
-
-function moveFirstNCharsToEnd(n, string) {
-  const start = string.substring(0, n);
-  const rest = string.substring(n);
-  const result = `${rest}${start}`;
-
-  return result;
-}
 
 function render (string, tickerProgress) {
   console.clear();
