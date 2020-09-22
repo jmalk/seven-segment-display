@@ -14,6 +14,7 @@ A seven segment display kata with evolving requirements.
 
 - Part One: https://github.com/jmalk/seven-segment-display/tree/v1.0
 - Part One to Two: https://github.com/jmalk/seven-segment-display/compare/v1.0...v2.0
+- Part Two to Three: https://github.com/jmalk/seven-segment-display/compare/v2.0...v3.0
 
 ## Notes
 
@@ -50,3 +51,15 @@ Requirements: Instead of taking a number as an argument make it render the curre
 There's been lots of churn as I discover bits of part 1 that weren't actually working as intended. But overall, the separation of gather input, convert it, output it has survived reasonably well. Instead of gather input you now have a `setInterval` which grabs the current time every half second. It is made into a string by `function timeToString({hours: number, minutes: number, seconds: number}): string` so that formatting logic could easily be changed in isolation.
 
 My main concern at the moment is that I'm generating too many files. E.g. left-pad could quite happily live inside time-to-string, since that's purely a formatting concern, not yet shared.
+
+### Part Three: Ticker Tape
+
+The input / process / output split has worked out quite well. Part one was all about process, i.e. getting from input string `'123'` to an output of seven-segment characters. Part two replaced the command line input with checking the current time.
+
+In this part we replace the straightforward `console.log` output with a more complex ticker tape.
+
+The main coupling I see is that the ticker tape expects data in a particular format - a string broken up by new lines. This is very tied to how I chose to implement the "process" bit of the code.
+
+There's also lots of sneakier bits of coupling in there. Such as, if the itemWidth divided by tickerTapeWidth is not a whole number, it doesn't scroll smoothly forever. If the intervals of the time-checking interval and the ticker updating interval were radically different, who knows what might happen? They're in different files so it'd be easy to change one, unaware of the other.
+
+One tactic I chose in this section was to extract string-manipulating functions into a single helper library. Hopefully that keeps the intent of "business logic" modules more clear.
