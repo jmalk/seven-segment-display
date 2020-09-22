@@ -4,6 +4,14 @@ const moveFirstNCharsToEnd = require(`./move-first-n-chars-to-end`);
 const tapeWidth = 120;
 const itemWidth = 30;
 
+function repeatUntilFull(string, width) {
+  let result = string;
+  while (result.length < width) {
+    result += string;
+  }
+  return result;
+}
+
 function render (string, tickerProgress) {
   console.clear();
 
@@ -11,8 +19,7 @@ function render (string, tickerProgress) {
 
   const paddedLines = lines.map((line) => leftPad(line, itemWidth, ` `));
 
-  // TODO: Use tape width instead of line line line line... maybe?
-  const repeatedLines = paddedLines.map((line) => `${line}${line}${line}${line}`)
+  const repeatedLines = paddedLines.map((line) => repeatUntilFull(line, tapeWidth))
 
   const mover = moveFirstNCharsToEnd.bind(null, tickerProgress);
   const movedLines = repeatedLines.map(mover);
