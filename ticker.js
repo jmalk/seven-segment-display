@@ -22,9 +22,9 @@ function render (string, tickerProgress) {
   const repeatedLines = paddedLines.map((line) => `${line}${line}${line}${line}`)
 
   const mover = moveFirstNCharsToEnd.bind(null, tickerProgress);
-  const loopedLines = repeatedLines.map(mover);
+  const movedLines = repeatedLines.map(mover);
 
-  const output = loopedLines.join(`\n`);
+  const output = movedLines.join(`\n`);
 
   console.log(output);
 }
