@@ -1,9 +1,6 @@
 const leftPad = require(`./left-pad`);
 const moveFirstNCharsToEnd = require(`./move-first-n-chars-to-end`);
 
-const tapeWidth = 120;
-const itemWidth = 30;
-
 function repeatUntilFull(string, width) {
   let result = string;
   while (result.length < width) {
@@ -12,7 +9,7 @@ function repeatUntilFull(string, width) {
   return result;
 }
 
-function render (string, tickerProgress) {
+function render (string, tickerProgress, tapeWidth, itemWidth) {
   console.clear();
 
   const lines = string.split(`\n`).filter((ln) => ln.length > 0);
@@ -30,11 +27,13 @@ function render (string, tickerProgress) {
 }
 
 module.exports = function TickerTape () {
+  const tapeWidth = 120;
+  const itemWidth = 30;
   let value = ` `;
   let tickerProgress = 0;
 
   setInterval(() => {
-    render(value, tickerProgress);
+    render(value, tickerProgress, tapeWidth, itemWidth);
     tickerProgress = (tickerProgress + 1) % tapeWidth;
   }, 100);
 
