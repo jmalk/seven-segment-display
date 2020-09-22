@@ -11,7 +11,7 @@ function moveFirstNCharsToEnd(n, string) {
   return result;
 }
 
-function update (result, tickerProgress) {
+function render (result, tickerProgress) {
   console.clear();
 
   const lines = result.split(`\n`).filter((ln) => ln.length > 0);
@@ -34,7 +34,7 @@ module.exports = function Ticker () {
   let tickerProgress = 0;
 
   setInterval(() => {
-    update(value, tickerProgress);
+    render(value, tickerProgress);
     tickerProgress = (tickerProgress + 1) % tapeWidth;
   }, 100);
 
