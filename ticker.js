@@ -3,8 +3,6 @@ const leftPad = require(`./left-pad`);
 const tapeWidth = 120;
 const itemWidth = 30;
 
-let tickerProgress = 0;
-
 function moveFirstNCharsToEnd(n, string) {
   const start = string.substring(0, n);
   const rest = string.substring(n);
@@ -13,7 +11,7 @@ function moveFirstNCharsToEnd(n, string) {
   return result;
 }
 
-function update (result) {
+function update (result, tickerProgress) {
   console.clear();
 
   const lines = result.split(`\n`).filter((ln) => ln.length > 0);
@@ -33,9 +31,10 @@ function update (result) {
 
 module.exports = function Ticker () {
   let value = ` `;
+  let tickerProgress = 0;
 
   setInterval(() => {
-    update(value);
+    update(value, tickerProgress);
     tickerProgress = (tickerProgress + 1) % tapeWidth;
   }, 100);
 
