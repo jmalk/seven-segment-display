@@ -1,6 +1,8 @@
-const leftPad = require(`./left-pad`);
-const moveFirstNCharsToEnd = require(`./move-first-n-chars-to-end`);
-const repeatString = require(`./repeat-string`);
+const {
+  leftPad,
+  moveFirstNCharsToEnd,
+  repeatString
+} = require(`./string-utils`);
 
 function render (string, tickerProgress, tapeWidth, itemWidth) {
   console.clear();

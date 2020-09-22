@@ -1,4 +1,4 @@
-const leftPad = require(`./left-pad`);
+const { leftPad } = require(`./string-utils`);
 
 module.exports = function ({hours, minutes, seconds}) {
   return [hours, minutes, seconds]

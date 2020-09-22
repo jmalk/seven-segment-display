@@ -1,5 +1,5 @@
-const leftPadTest = require(`./left-pad.test`);
+const stringUtilsTest = require(`./string-utils.test`);
 const convertTest = require(`./convert.test`);
 
-leftPadTest();
+stringUtilsTest();
 convertTest();

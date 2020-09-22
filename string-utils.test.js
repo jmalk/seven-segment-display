@@ -1,5 +1,5 @@
 const assert = require(`assert`).strict;
-const leftPad = require(`./left-pad`);
+const { leftPad } = require(`./string-utils`);
 
 module.exports = function run () {
   console.log(`Running tests from ${__filename}`)
