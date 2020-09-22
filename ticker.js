@@ -11,10 +11,10 @@ function moveFirstNCharsToEnd(n, string) {
   return result;
 }
 
-function render (result, tickerProgress) {
+function render (string, tickerProgress) {
   console.clear();
 
-  const lines = result.split(`\n`).filter((ln) => ln.length > 0);
+  const lines = string.split(`\n`).filter((ln) => ln.length > 0);
 
   const paddedLines = lines.map((line) => leftPad(line, itemWidth, ` `));
 
