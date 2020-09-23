@@ -1,12 +1,16 @@
-const {characters, rowHeight} = require(`./font`);
+const {characters, rowHeight: originalRowHeight} = require(`./font`);
+const stretchCharacter = require(`./stretch-character`);
 
-module.exports = function getCharacters (digitString) {
+module.exports = function getCharacters (digitString, stretchBy) {
   const digits = digitString.split(``);
   const mappedDigits = digits.map((digit) => characters[digit]);
+  const stretched = mappedDigits.map((digit) => stretchCharacter(digit, stretchBy))
+
+  const extraRows = 2 * (stretchBy - 1)
 
   const segmentCharacters = {
-    rowHeight: rowHeight,
-    characters: mappedDigits
+    rowHeight: originalRowHeight + extraRows,
+    characters: stretched
   }
 
   return segmentCharacters;

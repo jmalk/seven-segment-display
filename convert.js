@@ -1,8 +1,8 @@
 const getCharacters = require(`./get-characters`);
 const makeString = require(`./make-string`);
 
-function convert(input) {
-  const segmented = getCharacters(input);
+function convert(input, stretch) {
+  const segmented = getCharacters(input, stretch);
 
   const outputString = makeString(segmented);
 

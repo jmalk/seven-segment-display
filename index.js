@@ -6,12 +6,14 @@ const TickerTape = require(`./ticker-tape`);
 
 const tickerTape = TickerTape();
 
+const stretch = process.argv[2] || 1;
+
 function updateTime() {
   const string = timeToString(currentTime());
   const isValid = validateInput(string);
 
   if (isValid) {
-    const result = convert(string);
+    const result = convert(string, stretch);
     tickerTape.updateDisplay(result);
   } else {
     console.error(`Generated an invalid string from the current time. Please file a bug report at https://github.com/jmalk/seven-segment-display/issues`);
