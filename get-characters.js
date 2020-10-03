@@ -1,7 +1,7 @@
 const {characters, rowHeight: originalRowHeight} = require(`./font`);
 const stretchCharacter = require(`./stretch-character`);
 
-module.exports = function getCharacters (digitString, stretchBy) {
+module.exports = function getCharacters (digitString, stretchBy = 1) {
   const digits = digitString.split(``);
   const mappedDigits = digits.map((digit) => characters[digit]);
   const stretched = mappedDigits.map((digit) => stretchCharacter(digit, stretchBy))
