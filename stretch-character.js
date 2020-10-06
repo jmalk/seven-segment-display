@@ -1,3 +1,5 @@
+const { widen } = require("./string-utils");
+
 const pipesOnly = (char) => char === '|' ? '|' : ' ';
 
 const copyVerticals = (string) => {
@@ -15,17 +17,19 @@ module.exports = function (segmentedCharacter, stretchBy) {
   const middleRowVerticals = copyVerticals(middleRow);
   const bottomRowVerticals = copyVerticals(bottomRow);
 
-  let stretched = [];
+  let taller = [];
 
-  stretched.push(topRow);
+  taller.push(topRow);
   for (var i = 0; i < (stretchBy - 1); i++ ) {
-    stretched.push(middleRowVerticals);
+    taller.push(middleRowVerticals);
   }
-  stretched.push(middleRow);
+  taller.push(middleRow);
   for (var i = 0; i < (stretchBy - 1); i++ ) {
-    stretched.push(bottomRowVerticals);
+    taller.push(bottomRowVerticals);
   }
-  stretched.push(bottomRow);
+  taller.push(bottomRow);
 
-  return stretched;
+  const wider = taller.map((row) => widen(row, stretchBy))
+
+  return wider;
 }

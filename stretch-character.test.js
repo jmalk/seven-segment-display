@@ -15,23 +15,53 @@ module.exports = function run () {
 
   // Stretch factor 2 makes each single pipe vertical 2 pipes high.
   const twoStretchedNine = [
-    ` _ `,
-    `| |`,
-    `|_|`,
-    `  |`,
-    ` _|`
+    ` __ `,
+    `|  |`,
+    `|__|`,
+    `   |`,
+    ` __|`
   ];
   assert.deepStrictEqual(stretchCharacter(nine, 2), twoStretchedNine);
 
   // Stretch factor 3 makes each single pipe vertical 3 pipes high.
   const threeStretchedNine = [
-    ` _ `,
-    `| |`,
-    `| |`,
-    `|_|`,
-    `  |`,
-    `  |`,
-    ` _|`
+    ` ___ `,
+    `|   |`,
+    `|   |`,
+    `|___|`,
+    `    |`,
+    `    |`,
+    ` ___|`
   ];
   assert.deepStrictEqual(stretchCharacter(nine, 3), threeStretchedNine);
+
+  const dots = [
+    `   `,
+    ` • `,
+    ` • `
+  ];
+
+  assert.deepStrictEqual(stretchCharacter(dots, 1), dots);
+
+  const twoStretchedDots = [
+    `    `,
+    `    `,
+    `  • `,
+    `    `,
+    `  • `
+  ]
+
+  assert.deepStrictEqual(stretchCharacter(dots, 2), twoStretchedDots);
+
+  const threeStretchedDots = [
+    `     `,
+    `     `,
+    `     `,
+    `   • `,
+    `     `,
+    `     `,
+    `   • `
+  ]
+
+  assert.deepStrictEqual(stretchCharacter(dots, 3), threeStretchedDots);
 }

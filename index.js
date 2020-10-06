@@ -6,7 +6,7 @@ const TickerTape = require(`./ticker-tape`);
 
 const tickerTape = TickerTape();
 
-const stretch = process.argv[2] || 1;
+const stretch = process.argv[2] != null ? Number(process.argv[2]) : 1;
 
 function updateTime() {
   const string = timeToString(currentTime());
