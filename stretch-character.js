@@ -1,4 +1,4 @@
-const { widen } = require("./string-utils");
+const makeWider = require(`./make-wider`);
 
 const pipesOnly = (char) => char === '|' ? '|' : ' ';
 
@@ -29,7 +29,7 @@ module.exports = function (segmentedCharacter, stretchBy) {
   }
   taller.push(bottomRow);
 
-  const wider = taller.map((row) => widen(row, stretchBy))
+  const wider = taller.map((row) => makeWider(row, stretchBy))
 
   return wider;
 }
