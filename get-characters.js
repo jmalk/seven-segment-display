@@ -1,4 +1,4 @@
-const {characters, rowHeight: originalRowHeight} = require(`./font`);
+const { characters, rowHeight: originalRowHeight } = require(`./font`);
 const stretchCharacter = require(`./stretch-character`);
 
 module.exports = function getCharacters (digitString, stretchBy = 1) {

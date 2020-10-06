@@ -1,6 +1,6 @@
+const validateInput = require(`./validate-input`);
 const currentTime = require(`./current-time`);
 const timeToString = require(`./time-to-string`);
-const validateInput = require(`./validate-input`);
 const convert = require(`./convert`);
 const TickerTape = require(`./ticker-tape`);
 

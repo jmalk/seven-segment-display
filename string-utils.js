@@ -1,9 +1,8 @@
 function moveFirstNCharsToEnd(n, string) {
   const firstNChars = string.substring(0, n);
   const rest = string.substring(n);
-  const result = `${rest}${firstNChars}`;
 
-  return result;
+  return `${rest}${firstNChars}`;
 }
 
 function leftPad(string, minimumLength, char = `0`) {

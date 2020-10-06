@@ -4,9 +4,7 @@ const makeString = require(`./make-string`);
 function convert(input, stretch) {
   const segmented = getCharacters(input, stretch);
 
-  const outputString = makeString(segmented);
-
-  return outputString;
+  return makeString(segmented);
 }
 
 module.exports = convert;

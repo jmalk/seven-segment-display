@@ -20,7 +20,7 @@ module.exports = function run () {
   // Stretch spaces by adding more
   assert.strictEqual(makeWider(`   `, 1), `   `); // three spaces => three spaces
   assert.strictEqual(makeWider(`   `, 2), `    `); // three spaces => four spaces
-  assert.strictEqual(makeWider(`  |`, 2), `   |`); // three spaces => four spaces
+  assert.strictEqual(makeWider(`  |`, 2), `   |`);
   assert.strictEqual(makeWider(`   `, 3), `     `); // three spaces => five spaces
-  assert.strictEqual(makeWider(`|  `, 3), `|    `); // three spaces => five spaces
+  assert.strictEqual(makeWider(`|  `, 3), `|    `);
 }
