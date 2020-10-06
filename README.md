@@ -8,7 +8,7 @@ A seven segment display kata with evolving requirements.
 
 ## Test
 
-`node all-tests.test.js`
+`node run-tests.js`
 
 ## Churn between each set of requirements:
 
