@@ -63,3 +63,9 @@ The main coupling I see is that the ticker tape expects data in a particular for
 There's also lots of sneakier bits of coupling in there. Such as, if the itemWidth divided by tickerTapeWidth is not a whole number, it doesn't scroll smoothly forever. If the intervals of the time-checking interval and the ticker updating interval were radically different, who knows what might happen? They're in different files so it'd be easy to change one, unaware of the other.
 
 One tactic I chose in this section was to extract string-manipulating functions into a single helper library. Hopefully that keeps the intent of "business logic" modules more clear.
+
+### Part Four: Size
+
+At this point I wish I'd stored the characters as nested arrays for as long as possible before deciding how to output them. I feel like the "process" part of the programme should work on arrays then the "output" (ticker tape) bit should decide how to turn those into strings.
+
+I was able to do re-sizing at the point where you get characters, then pass it on to the ticker tape to be outputted, without having to refactor the ticker tape. So I must've done something good for myself there.
