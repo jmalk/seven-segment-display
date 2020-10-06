@@ -16,6 +16,14 @@ A seven segment display kata with evolving requirements.
 - Part One to Two: https://github.com/jmalk/seven-segment-display/compare/v1.0...v2.0
 - Part Two to Three: https://github.com/jmalk/seven-segment-display/compare/v2.0...v3.0
 
+## Draw a graph
+
+```
+brew install graphviz
+npx madge --image graph.svg index.js
+open graph.svg -a "Google Chrome"
+```
+
 ## Notes
 
 ### Part One: IO
