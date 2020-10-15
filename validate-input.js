@@ -1,4 +1,5 @@
 const Font = require(`./font`);
+
 // This seems hacky somehow... Why does validate input have to know about a
 // default value to pass to Font just to get the characters?
 // Perhaps it would be better to have validation happen within get-characters.

@@ -99,6 +99,8 @@ const segments = {
 }
 ```
 
+In trying to lift this dictionary of segments up so that it can be shared by multiple files, I think I've stumbled into dependency inversion. But I have only the haziest idea what that means. Would be interesting to learn more.
+
 ### Resources
 
 - https://connascence.io/

@@ -1,4 +1,4 @@
-module.exports = function ({blank, vertical, horizontal, dot}) {
+module.exports = function ({ blank, vertical, horizontal, dot }) {
   return {
     rowHeight: 3,
     characters: {
