@@ -1,48 +1,49 @@
+const { blank, vertical, horizontal, dot } = require('./segments');
 module.exports = {
   rowHeight: 3,
   characters: {
-    0: [ ` _ `,
-         `| |`,
-         `|_|` ],
+    0: [ `${blank}${horizontal}${blank}`,
+         `${vertical}${blank}${vertical}`,
+         `${vertical}${horizontal}${vertical}` ],
 
-    1: [ `   `,
-         `  |`,
-         `  |` ],
+    1: [ `${blank}${blank}${blank}`,
+         `${blank}${blank}${vertical}`,
+         `${blank}${blank}${vertical}` ],
 
-    2: [ ` _ `,
-         ` _|`,
-         `|_ ` ],
+    2: [ `${blank}${horizontal}${blank}`,
+         `${blank}${horizontal}${vertical}`,
+         `${vertical}${horizontal}${blank}` ],
 
-    3: [ ` _ `,
-         ` _|`,
-         ` _|` ],
+    3: [ `${blank}${horizontal}${blank}`,
+         `${blank}${horizontal}${vertical}`,
+         `${blank}${horizontal}${vertical}` ],
 
-    4: [ `   `,
-         `|_|`,
-         `  |` ],
+    4: [ `${blank}${blank}${blank}`,
+         `${vertical}${horizontal}${vertical}`,
+         `${blank}${blank}${vertical}` ],
 
-    5: [ ` _ `,
-         `|_ `,
-         ` _|` ],
+    5: [ `${blank}${horizontal}${blank}`,
+         `${vertical}${horizontal}${blank}`,
+         `${blank}${horizontal}${vertical}` ],
 
-    6: [ ` _ `,
-         `|_ `,
-         `|_|` ],
+    6: [ `${blank}${horizontal}${blank}`,
+         `${vertical}${horizontal}${blank}`,
+         `${vertical}${horizontal}${vertical}` ],
 
-    7: [ ` _ `,
-         `  |`,
-         `  |` ],
+    7: [ `${blank}${horizontal}${blank}`,
+         `${blank}${blank}${vertical}`,
+         `${blank}${blank}${vertical}` ],
 
-    8: [ ` _ `,
-         `|_|`,
-         `|_|` ],
+    8: [ `${blank}${horizontal}${blank}`,
+         `${vertical}${horizontal}${vertical}`,
+         `${vertical}${horizontal}${vertical}` ],
 
-    9: [ ` _ `,
-         `|_|`,
-         ` _|` ],
+    9: [ `${blank}${horizontal}${blank}`,
+         `${vertical}${horizontal}${vertical}`,
+         `${blank}${horizontal}${vertical}` ],
 
-    ":": [ `   `,
-           ` • `,
-           ` • ` ]
+    ":": [ `${blank}${blank}${blank}`,
+           `${blank}${dot}${blank}`,
+           `${blank}${dot}${blank}` ]
   }
 }
