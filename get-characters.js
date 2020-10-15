@@ -1,5 +1,9 @@
-const { characters, rowHeight: originalRowHeight } = require(`./font`);
+const segments = require(`./segments`);
+const Font = require(`./font`);
 const stretchCharacter = require(`./stretch-character`);
+
+const font = Font(segments);
+const { characters, rowHeight: originalRowHeight } = font;
 
 module.exports = function getCharacters (digitString, stretchBy = 1) {
   const digits = digitString.split(``);
