@@ -78,3 +78,9 @@ One tactic I chose in this section was to extract string-manipulating functions 
 At this point I wish I'd stored the characters as nested arrays for as long as possible before deciding how to output them. I feel like the "process" part of the programme should work on arrays then the "output" (ticker tape) bit should decide how to turn those into strings.
 
 I was able to do re-sizing at the point where you get characters, then pass it on to the ticker tape to be outputted, without having to refactor the ticker tape. So I must've done something good for myself there.
+
+### Connascence
+
+The next challenge is to find an example of connascence in the code and refactor it to a less severe form.
+
+* Question: What is the difference between connascence of meaning and of value? It seems subtle to me.
