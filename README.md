@@ -84,3 +84,23 @@ I was able to do re-sizing at the point where you get characters, then pass it o
 The next challenge is to find an example of connascence in the code and refactor it to a less severe form.
 
 * Question: What is the difference between connascence of meaning and of value? It seems subtle to me.
+
+One example of connascence in v4.0 of the code is that `make-taller`, `make-wider` and `font` all have to agree on what characters are used for different parts of the output. So if you go into the font and replace underscores with dashes, pipes with the letter `l` and the `•` dots with full stops, your output breaks.
+
+This seems like an example of primitive obsession; connascence of meaning. Multiple files are assuming that the `|` means "vertical component of a segmented character".
+
+To make this assumption explicit, we can extract the actual values and define them in a variable at the highest level that shares the understanding. Something like:
+
+```
+const segments = {
+  vertical: `|`,
+  horizontal: `_`,
+  dot: `•`
+}
+```
+
+### Resources
+
+- https://connascence.io/
+- [Talk: Red, Green... what now?!](https://youtu.be/fSr8LDcb0Y0) by Kevin Rutherford and James Jeffries.
+- [GeePawHill's thread](https://twitter.com/geepawhill/status/1279758377573285888) - "Turning implicit understanding into explicit code is a great productivity & quality step."
