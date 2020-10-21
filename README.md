@@ -16,6 +16,7 @@ A seven segment display kata with evolving requirements.
 - Part One to Two: https://github.com/jmalk/seven-segment-display/compare/v1.0...v2.0
 - Part Two to Three: https://github.com/jmalk/seven-segment-display/compare/v2.0...v3.0
 - Part Three to Four: https://github.com/jmalk/seven-segment-display/compare/v3.0...v4.0
+- Connascence refactor: https://github.com/jmalk/seven-segment-display/compare/v4.0...v4.1
 
 ## Draw a graph
 
