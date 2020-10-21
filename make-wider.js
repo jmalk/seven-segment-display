@@ -1,4 +1,4 @@
-function makeWider(string, stretchBy = 1) {
+function makeWider(string, stretchBy = 1, segments) {
   if (typeof stretchBy !== `number`) {
     throw new Error(`Second argument to makeWider must be a number`);
   }
@@ -13,8 +13,8 @@ function makeWider(string, stretchBy = 1) {
   for (let i = 0; i < stretchBy; i++) {
     const middleCharacter = asArray[1];
     // Special case for dots - they get moved over instead of stretched
-    if (middleCharacter === `•` && i !== (stretchBy - 1)) {
-      stretched.push(` `);
+    if (middleCharacter === segments.dot && i !== (stretchBy - 1)) {
+      stretched.push(segments.blank);
     } else {
       stretched.push(middleCharacter);
     }

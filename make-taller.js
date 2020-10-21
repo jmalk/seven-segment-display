@@ -1,4 +1,15 @@
-function makeTaller (rows, stretchBy) {
+function makeTaller (rows, stretchBy, segments) {
+  const copyVerticals = (string) => {
+    return string
+    .split(``)
+    .map(verticalsOnly)
+    .join(``);
+  };
+
+  const verticalsOnly = (char) => {
+    return char === segments.vertical ? segments.vertical : segments.blank;
+  }
+
   const topRow = rows[0];
   const middleRow = rows[1];
   const bottomRow = rows[2];
@@ -20,14 +31,5 @@ function makeTaller (rows, stretchBy) {
 
   return taller;
 }
-
-const copyVerticals = (string) => {
-  return string
-  .split(``)
-  .map(pipesOnly)
-  .join(``);
-};
-
-const pipesOnly = (char) => char === `|` ? `|` : ` `;
 
 module.exports = makeTaller;

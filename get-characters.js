@@ -8,7 +8,7 @@ const { characters, rowHeight: originalRowHeight } = font;
 module.exports = function getCharacters (digitString, stretchBy = 1) {
   const digits = digitString.split(``);
   const mappedDigits = digits.map((digit) => characters[digit]);
-  const stretched = mappedDigits.map((digit) => stretchCharacter(digit, stretchBy))
+  const stretched = mappedDigits.map((digit) => stretchCharacter(digit, stretchBy, segments))
 
   const extraRows = 2 * (stretchBy - 1)
 
