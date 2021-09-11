@@ -1,6 +1,6 @@
 # README
 
-A scrolling clock!
+A scrolling clock in your terminal!
 
 https://user-images.githubusercontent.com/6491332/132953516-de0d026d-703e-46eb-9f22-fdd6d718ad90.mov
 
