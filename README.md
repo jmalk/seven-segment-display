@@ -1,5 +1,9 @@
 # README
 
+A scrolling clock!
+
+https://user-images.githubusercontent.com/6491332/132953516-de0d026d-703e-46eb-9f22-fdd6d718ad90.mov
+
 A seven segment display kata with evolving requirements.
 
 No dependencies allowed! If you [download Node](https://nodejs.org/en/download/) you should be able to run this.
