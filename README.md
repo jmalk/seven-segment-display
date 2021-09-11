@@ -2,6 +2,8 @@
 
 A seven segment display kata with evolving requirements.
 
+No dependencies allowed! If you [download Node](https://nodejs.org/en/download/) you should be able to run this.
+
 ## Run
 
 `node index.js`
